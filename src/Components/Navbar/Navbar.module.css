@@ -1,0 +1,8 @@
+
+.menu {
+  grid-area: m;
+  background-color: #7cb3a0;
+  }
+  .item {
+    color: rgb(8, 253, 159);
+  }

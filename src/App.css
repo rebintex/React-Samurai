@@ -1,0 +1,23 @@
+
+.app-wrapper {
+  width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-rows: 25% 75%;
+  grid-template-columns: 20% 80%;
+  grid-gap: 1px;
+  grid-template-areas: 
+  "h h"
+  "m c";
+
+}
+
+.menu {
+grid-area: m;
+background-color: #7cb3a0;
+}
+
+.content {
+grid-area: c;
+background-color: #63f501;
+}
