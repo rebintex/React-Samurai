@@ -16,7 +16,7 @@ const MyPosts = () => {
                 <Post />
                 <Post news="I am the Third"/>
                 <Post />
-                <Post />
+                
             </div>
 
 

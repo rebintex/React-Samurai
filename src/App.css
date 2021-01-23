@@ -21,3 +21,9 @@ background-color: #7cb3a0;
 grid-area: c;
 background-color: #63f501;
 }
+
+.app-wrapper-content {
+  grid-area: c;
+  background-color: #a7c792;
+
+}

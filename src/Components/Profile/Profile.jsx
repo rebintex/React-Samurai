@@ -4,7 +4,7 @@ import MyPosts from './MyPosts/MyPosts';
 
 const Profile = () => {
     return (
-        <div className={s.content}>
+        <div>
             <div>
                 <h1>Heading 1</h1>
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
