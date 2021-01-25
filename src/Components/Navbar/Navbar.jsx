@@ -6,10 +6,10 @@ const Navbar = () => {
     return (
         <nav className="menu">
         <ul>
-          <li className={s.item}><a href="#">Profile</a></li>
-          <li className={s.item}><a href="#">Messages</a></li>
-          <li className={s.item}><a href="#">Contacts</a></li>
-          <li className={s.item}><a href="#">Videos</a></li>
+          <li className={s.item}><a href="/profile">Profile</a></li>
+          <li className={s.item}><a href="/messages">Messages</a></li>
+          <li className={s.item}><a href="/contacts">Contacts</a></li>
+          <li className={s.item}><a href="/videos">Videos</a></li>
         </ul> 
        </nav>
     )
