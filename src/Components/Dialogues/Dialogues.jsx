@@ -1,24 +1,59 @@
 import React from 'react';
 import s from './Dialogues.module.css';
+import { NavLink } from 'react-router-dom';
+
+const DialItem = (props) => {
+    let path = '/messages/' + props.id; 
+    
+    return (
+        <div className={s.dialogue + ' ' + s.active}>
+            <NavLink to={path}>{props.name}</NavLink>
+        </div>
+    )
+}
+
+const Message = (props) => {
+    return (
+        <div className={s.message}>{props.message}</div>
+    )
+};
 
 const Dialogues = (props) => {
+   
+    let DialogData = [
+        {id: 0, name: "Andrey"},
+        {id: 1, name: "Bakhadir"},
+        {id: 2, name: "Vladilen"},
+        {id: 3, name: "Aleksey"},
+        {id: 4, name: "Sergey"},
+    ]
+
+    let messageData = [
+        {id: 0, message: "Hi man,"},
+        {id: 1, message: "Hello bro,"},
+        {id: 2, message: "How are you"},
+        {id: 3, message: "How do you do?"},
+        {id: 4, message: "Good day"},
+    ]
+
+
+
     return (
-        <div>
-            <h1>
-                Dialogues
-            </h1>
-            <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis eius voluptates, ducimus odit quod officia reiciendis? Odit repellendus deserunt ipsa magni magnam, ratione et quos voluptatibus, similique dolore, atque commodi.
-            Enim error accusamus, qui magnam aspernatur saepe fuga explicabo provident ratione maxime quos maiores fugiat veritatis soluta nemo blanditiis odio distinctio modi velit alias recusandae! Maxime sint nisi hic sunt?
-            Minus dignissimos temporibus nesciunt culpa ex voluptates sapiente corporis, odit porro doloremque blanditiis. Recusandae, tempore exercitationem modi similique, consequatur ut doloremque voluptas enim quod dolores facere sit iure harum! Iste!
-            Itaque, non! Quod atque ea commodi doloribus id possimus ad consequuntur omnis ab laborum ipsa asperiores praesentium distinctio natus veritatis, facere maxime, culpa error debitis sed ducimus unde. Suscipit, fuga?
-            Neque facilis atque excepturi officia pariatur molestiae. Accusamus enim, similique sequi vitae at pariatur animi odio eligendi beatae provident sapiente alias rerum aliquam! Sed quidem deleniti totam praesentium. Exercitationem, id.
-            Asperiores quos nulla totam necessitatibus veniam possimus rerum adipisci perspiciatis aliquam ducimus quis, odit saepe dolore officiis nihil maiores quod harum officia, eius nostrum id vitae perferendis corrupti. Odio, iste.
-            Doloremque rem cupiditate excepturi magni error totam dignissimos. Omnis suscipit dolor repellat! Quis nulla fugiat quia consequuntur debitis incidunt vel itaque, culpa possimus in atque quos sint eligendi? Consequuntur, autem.
-            </p>
- 
-
-
+        <div className={s.dialogues}>
+            <div className={s.dialoguesItems}>
+                <DialItem name = {DialogData[0].name} id = {DialogData[0].id}/>
+                <DialItem name = {DialogData[1].name}  id = {DialogData[1].id}/>
+                {/* <DialItem name = "Vladilen" id = "2"/>
+                <DialItem name = "Aleksey" id = "3"/>
+                <DialItem name = "Sergey" id = "4"/> */}
+            </div>
+            <div className={s.messages}>
+                <Message message = {messageData[0].message} />
+                <Message message = {messageData[1].message} />
+                {/* <Message message = "How are you" />
+                <Message message = "How do you do?" />
+                <Message message = "Good day" /> */}
+            </div>
         </div>
     )
 }

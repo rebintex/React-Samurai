@@ -2,7 +2,16 @@
 .menu {
   grid-area: m;
   background-color: #7cb3a0;
+  padding: 20px;
   }
-  .item {
-    color: rgb(8, 253, 159);
+  .item a{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
   }
+  item li {
+    list-style-type: none;
+  } 
+
+  .item a.activeLink {
+    color: rgb(230, 213, 139);
+  } 

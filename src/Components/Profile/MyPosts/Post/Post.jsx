@@ -9,7 +9,7 @@ const Post = (props) => {
                 <div>Next Post</div>
                 {props.news}
                 <div>
-                    <span className={s.like}>LIKE</span>
+                    <span className={s.like}>Likes: {props.likes}</span>
                 </div>
             </div>
        </div>
