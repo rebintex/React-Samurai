@@ -3,13 +3,12 @@ import s from './MyPosts.module.css'
 import Post from './Post/Post';
 
 
-const MyPosts = () => {
+const MyPosts = (props) => {
 
-    let postData = [
-        {id: 0, news: "I am the First", likes: '1'},
-        {id: 1, news: "I am the Second", likes: '21'}
-        
-    ]
+    
+    let postsElements = props.posts
+        .map(p => <Post news={p.news} likes = {p.likes} />);
+
 
     return (
         <div className={s.postsBlock}>
@@ -19,9 +18,7 @@ const MyPosts = () => {
                 <div><button>Add Posts</button></div>
             </div>
             <div className = {s.posts}>
-                <Post news={postData[0].news} likes = {postData[0].likes}/>
-                <Post news={postData[1].news} likes = {postData[1].likes} />
-                
+                {postsElements}
             </div>
 
 

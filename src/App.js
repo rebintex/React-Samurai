@@ -10,17 +10,21 @@ import Videos from './Components/Videos/Videos';
 import {BrowserRouter, Route} from 'react-router-dom'; 
 
 
-function App() {
+
+function App(props) {
+
+  
+
   return (
     <BrowserRouter>
     <div className="app-wrapper">
        <Header />
        <Navbar />
        <div className="app-wrapper-content">
-       <Route path = '/messages' component={Dialogues} />
-       <Route path = '/profile' component={Profile} />
-       <Route path = '/contacts' component={Contacts} />
-       <Route path = '/videos' component={Videos} />
+       <Route path = '/messages' render={() => <Dialogues dialogues={props.dialogues} messages={props.messages}/> } />
+       <Route path = '/profile' render={() => <Profile posts={props.posts} /> } />
+       <Route path = '/contacts' render={() => <Contacts/> } />
+       <Route path = '/videos' render={() => <Videos/> } />
      
        </div> 
     </div> 
