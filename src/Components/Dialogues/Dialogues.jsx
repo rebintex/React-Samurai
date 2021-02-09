@@ -22,10 +22,10 @@ const Dialogues = (props) => {
 
    
 
-    let dialoguesElements = props.dialogues
+    let dialoguesElements = props.state.dialogues
         .map(d => <DialItem name={d.name} id={d.id} />);
 
-    let messageElements = props.messages
+    let messageElements = props.state.messages
         .map(m => <Message message={m.message} />);
 
 
